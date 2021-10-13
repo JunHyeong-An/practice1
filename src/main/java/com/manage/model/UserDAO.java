@@ -9,4 +9,5 @@ public interface UserDAO {
 	void modifyUser(UserDTO dto);
 	void deleteUser(String id);
 	void deleteAllUser();
+	UserDTO login(UserDTO dto);
 }

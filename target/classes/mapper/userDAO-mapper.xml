@@ -26,4 +26,8 @@
 	<delete id="deleteAllUser">
 		TRUNCATE USERS
 	</delete>
+	
+	<select id="login" resultType="com.manage.model.UserDTO">
+		SELECT * FROM USERS WHERE ID = #{id} and PASSWORD = #{password}
+	</select>
 </mapper>

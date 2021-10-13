@@ -71,4 +71,10 @@ public class UserDAOTest {
 		dao.deleteUser(list.get(0).getId());
 		assertThat(dao.getUserList().size(), is(3));
 	}
+	
+	@Test
+	public void loginTest() {
+		UserDTO result = dao.login(list.get(0));
+		assertThat(result.getId(), is("hello1"));
+	}
 }
