@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.manage.model.UserDAO">
+	<select id="getUserList" resultType="com.manage.model.UserDTO">
+		SELECT * FROM USERS
+	</select>
+	
+	<select id="getUser" resultType="com.manage.model.UserDTO">
+		SELECT * FROM USERS WHERE ID=#{id}
+	</select>
+	
+	<insert id="addUser">
+		INSERT INTO USERS VALUES (#{id}, #{password}, #{name}, #{server})
+	</insert>
+	
+	<update id="modifyUser">
+		UPDATE USERS SET PASSWORD = #{password}, NAME = #{name}, SERVER = #{server} WHERE ID = #{id} 
+	</update>
+	
+	<delete id="deleteUser">
+		DELETE FROM USERS WHERE ID = #{id}
+	</delete>
+	
+	<delete id="deleteAllUser">
+		TRUNCATE USERS
+	</delete>
+</mapper>
