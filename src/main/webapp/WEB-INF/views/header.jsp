@@ -27,5 +27,6 @@
     	        <a href="${path }/user/join" class="user_menu_child">마이페이지</a>	
         	</c:if>
         </div>
+        <input id="path" type="hidden" value="${path }">
     </header>
     <hr>

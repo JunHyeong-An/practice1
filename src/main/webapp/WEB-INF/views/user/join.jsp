@@ -8,19 +8,19 @@
 		<table>
 			<tr>
 				<td>ID</td>
-				<td><input name="id" autocomplete="off" required></td>
+				<td><input name="id" autocomplete="off"></td>
 				<td>
-					<button>ID중복확인</button> <span id="id_permission">사용가능한 아이디입니다.</span>
+					<button id="id_check_btn">ID중복확인</button> <span id="id_permission">사용가능한 아이디입니다.</span>
 				</td>
 			</tr>
 			<tr>
 				<td>비밀번호</td>
-				<td><input type="password" name="password" required></td>
+				<td><input type="password" name="password"></td>
 				<td id="password_rule">영대문자 1자이상, 특수기호 1자이상을 포함시켜주세요</td>
 			</tr>
 			<tr>
 				<td>비밀번호 확인</td>
-				<td colspan="2"><input type="password" required></td>
+				<td colspan="2"><input type="password"></td>
 			</tr>
 			<tr>
 				<td>이름</td>
@@ -36,4 +36,5 @@
 		</table>
 	</section>
 </form>
+<script src="${path }/resources/user/join/join.js"></script>
 <%@ include file="../footer.jsp"%>
